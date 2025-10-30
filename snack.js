@@ -139,4 +139,5 @@ const chef = {
 }
 
 /*
-Qual è il metodo migliore per clonare l’oggetto chef, e perché?*/
+Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+RISPOSTA shallow copy perchè è reference safe e perchè ci sono delle funzioni */
