@@ -37,7 +37,7 @@ Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
 Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?  3 oggetti  */
 
 
-
+/*
 
 const hamburger = { 
 	name: "Cheese Burger", 
@@ -56,4 +56,32 @@ const hamburger = {
 const secondBurger = structuredClone(hamburger);
 const thirdBurger = structuredClone(hamburger);
 
-//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 3 oggetti all'interno ci sono altrettanti oggetti quindi 9*/
+
+
+
+
+const chef = {
+	name: "Chef Hyur",
+	age: 29,
+	makeBurger: (num = 1) => {
+		console.log(`Ecco ${num} hamburger per te!`);
+	},
+}
+
+const restaurant = {
+	name: "Hyur's Burgers",
+	address: {
+		street: 'Main Street',
+		number: 123,
+	},
+	openingDate: new Date(2025, 3, 11),
+	isOpen: false,
+};
+
+/*
+Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+RISPOSTA la shallow copy perchè esiste una funzione che non verrebbe copiata se fossero usate la deep copy con Json.stringlify e structuredClone
+Qual è il metodo migliore per clonare l’oggetto restaurant, e perché clone?
+RISPOSTA structuredClone perchè è pensato per copiare anche oggetti complessi come appunto date , se avessimo usato Json.stringlify new Date sarebbe restituito come stringa 
+*/
